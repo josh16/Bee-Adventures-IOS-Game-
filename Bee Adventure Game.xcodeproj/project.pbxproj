@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031969591E78700900109512 /* LeaderBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031969581E78700900109512 /* LeaderBoard.sks */; };
+		0319695D1E7872B100109512 /* CropsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0319695C1E7872B100109512 /* CropsBG.png */; };
+		0319695F1E78750B00109512 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319695E1E78750B00109512 /* LeaderBoard.swift */; };
+		031969611E7878A700109512 /* BeeGirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 031969601E7878A700109512 /* BeeGirl.png */; };
+		031969631E78844400109512 /* HoneyCombBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 031969621E78844400109512 /* HoneyCombBG.png */; };
+		031B81A81E6D190500291790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81A71E6D190500291790 /* AppDelegate.swift */; };
+		031B81AA1E6D190500291790 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031B81A91E6D190500291790 /* GameScene.sks */; };
+		031B81AC1E6D190500291790 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031B81AB1E6D190500291790 /* Actions.sks */; };
+		031B81AE1E6D190500291790 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81AD1E6D190500291790 /* GameScene.swift */; };
+		031B81B01E6D190500291790 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81AF1E6D190500291790 /* GameViewController.swift */; };
+		031B81B31E6D190500291790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B11E6D190500291790 /* Main.storyboard */; };
+		031B81B51E6D190500291790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B41E6D190500291790 /* Assets.xcassets */; };
+		031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B61E6D190500291790 /* LaunchScreen.storyboard */; };
+		031B81C31E6D190600291790 /* Bee_Adventure_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */; };
+		031B81CE1E6D190600291790 /* Bee_Adventure_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81CD1E6D190600291790 /* Bee_Adventure_GameUITests.swift */; };
+		031B81DC1E6D1ACD00291790 /* Bee Comb.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81DB1E6D1ACD00291790 /* Bee Comb.png */; };
+		031B81E51E6D259600291790 /* Background-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81E41E6D259600291790 /* Background-menu.png */; };
+		031B81E71E6D25BD00291790 /* button-restart.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81E61E6D25BD00291790 /* button-restart.png */; };
+		031B81E91E6D25C400291790 /* button-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81E81E6D25C400291790 /* button-menu.png */; };
+		031B81EB1E6D25C900291790 /* heart-full.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81EA1E6D25C900291790 /* heart-full.png */; };
+		0373D1DE1E76EBF80016699C /* LevelBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1DD1E76EBF80016699C /* LevelBg.jpg */; };
+		0373D1E21E76F59F0016699C /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E11E76F59F0016699C /* MainMenu.sks */; };
+		0373D1E41E76F5D40016699C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373D1E31E76F5D40016699C /* MainMenu.swift */; };
+		0373D1E61E773D750016699C /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E51E773D750016699C /* Settings.png */; };
+		03C714301E78550600E77628 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03C7142F1E78550600E77628 /* GameOverScene.sks */; };
+		03C714321E7855DA00E77628 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C714311E7855DA00E77628 /* GameOver.swift */; };
+		03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C714331E78575600E77628 /* LeaderBoardButton.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		031B81BF1E6D190600291790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031B819C1E6D190500291790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 031B81A31E6D190500291790;
+			remoteInfo = "Bee Adventure Game";
+		};
+		031B81CA1E6D190600291790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031B819C1E6D190500291790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 031B81A31E6D190500291790;
+			remoteInfo = "Bee Adventure Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		031969581E78700900109512 /* LeaderBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeaderBoard.sks; sourceTree = "<group>"; };
+		0319695C1E7872B100109512 /* CropsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CropsBG.png; sourceTree = "<group>"; };
+		0319695E1E78750B00109512 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		031969601E7878A700109512 /* BeeGirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BeeGirl.png; sourceTree = "<group>"; };
+		031969621E78844400109512 /* HoneyCombBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HoneyCombBG.png; sourceTree = "<group>"; };
+		031B81A41E6D190500291790 /* Bee Adventure Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bee Adventure Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		031B81A71E6D190500291790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		031B81A91E6D190500291790 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = "Bee Adventure Game/GameScene.sks"; sourceTree = "<group>"; };
+		031B81AB1E6D190500291790 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		031B81AD1E6D190500291790 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "Bee Adventure Game/GameScene.swift"; sourceTree = "<group>"; };
+		031B81AF1E6D190500291790 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		031B81B21E6D190500291790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		031B81B41E6D190500291790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		031B81B71E6D190500291790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		031B81B91E6D190500291790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031B81BE1E6D190600291790 /* Bee Adventure GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bee Adventure GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee_Adventure_GameTests.swift; sourceTree = "<group>"; };
+		031B81C41E6D190600291790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031B81C91E6D190600291790 /* Bee Adventure GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bee Adventure GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		031B81CD1E6D190600291790 /* Bee_Adventure_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee_Adventure_GameUITests.swift; sourceTree = "<group>"; };
+		031B81CF1E6D190600291790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031B81DB1E6D1ACD00291790 /* Bee Comb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bee Comb.png"; sourceTree = "<group>"; };
+		031B81E41E6D259600291790 /* Background-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background-menu.png"; sourceTree = "<group>"; };
+		031B81E61E6D25BD00291790 /* button-restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-restart.png"; sourceTree = "<group>"; };
+		031B81E81E6D25C400291790 /* button-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-menu.png"; sourceTree = "<group>"; };
+		031B81EA1E6D25C900291790 /* heart-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full.png"; sourceTree = "<group>"; };
+		0373D1DD1E76EBF80016699C /* LevelBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LevelBg.jpg; sourceTree = "<group>"; };
+		0373D1E11E76F59F0016699C /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		0373D1E31E76F5D40016699C /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		0373D1E51E773D750016699C /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		03C7142F1E78550600E77628 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		03C714311E7855DA00E77628 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		03C714331E78575600E77628 /* LeaderBoardButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeaderBoardButton.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		031B81A11E6D190500291790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81BB1E6D190600291790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81C61E6D190600291790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		031B819B1E6D190500291790 = {
+			isa = PBXGroup;
+			children = (
+				031B81A61E6D190500291790 /* Bee Adventure Game */,
+				031B81C11E6D190600291790 /* Bee Adventure GameTests */,
+				031B81CC1E6D190600291790 /* Bee Adventure GameUITests */,
+				031B81A51E6D190500291790 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		031B81A51E6D190500291790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				031B81A41E6D190500291790 /* Bee Adventure Game.app */,
+				031B81BE1E6D190600291790 /* Bee Adventure GameTests.xctest */,
+				031B81C91E6D190600291790 /* Bee Adventure GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		031B81A61E6D190500291790 /* Bee Adventure Game */ = {
+			isa = PBXGroup;
+			children = (
+				031B81E21E6D249500291790 /* Scene Classes */,
+				031B81E31E6D24A900291790 /* Audio */,
+				031B81A71E6D190500291790 /* AppDelegate.swift */,
+				031B81AB1E6D190500291790 /* Actions.sks */,
+				031B81AF1E6D190500291790 /* GameViewController.swift */,
+				031B81B11E6D190500291790 /* Main.storyboard */,
+				031B81B41E6D190500291790 /* Assets.xcassets */,
+				031969621E78844400109512 /* HoneyCombBG.png */,
+				031969601E7878A700109512 /* BeeGirl.png */,
+				0319695C1E7872B100109512 /* CropsBG.png */,
+				03C714331E78575600E77628 /* LeaderBoardButton.png */,
+				0373D1E51E773D750016699C /* Settings.png */,
+				0373D1DD1E76EBF80016699C /* LevelBg.jpg */,
+				031B81EA1E6D25C900291790 /* heart-full.png */,
+				031B81E81E6D25C400291790 /* button-menu.png */,
+				031B81E61E6D25BD00291790 /* button-restart.png */,
+				031B81E41E6D259600291790 /* Background-menu.png */,
+				031B81DB1E6D1ACD00291790 /* Bee Comb.png */,
+				031B81B61E6D190500291790 /* LaunchScreen.storyboard */,
+				031B81B91E6D190500291790 /* Info.plist */,
+			);
+			path = "Bee Adventure Game";
+			sourceTree = "<group>";
+		};
+		031B81C11E6D190600291790 /* Bee Adventure GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */,
+				031B81C41E6D190600291790 /* Info.plist */,
+			);
+			path = "Bee Adventure GameTests";
+			sourceTree = "<group>";
+		};
+		031B81CC1E6D190600291790 /* Bee Adventure GameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				031B81CD1E6D190600291790 /* Bee_Adventure_GameUITests.swift */,
+				031B81CF1E6D190600291790 /* Info.plist */,
+			);
+			path = "Bee Adventure GameUITests";
+			sourceTree = "<group>";
+		};
+		031B81E21E6D249500291790 /* Scene Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0319695E1E78750B00109512 /* LeaderBoard.swift */,
+				031B81AD1E6D190500291790 /* GameScene.swift */,
+				03C714311E7855DA00E77628 /* GameOver.swift */,
+				0373D1E31E76F5D40016699C /* MainMenu.swift */,
+				0373D1ED1E7743380016699C /* Scenes */,
+			);
+			name = "Scene Classes";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		031B81E31E6D24A900291790 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Audio;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0373D1ED1E7743380016699C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				031B81A91E6D190500291790 /* GameScene.sks */,
+				0373D1E11E76F59F0016699C /* MainMenu.sks */,
+				03C7142F1E78550600E77628 /* GameOverScene.sks */,
+				031969581E78700900109512 /* LeaderBoard.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		031B81A31E6D190500291790 /* Bee Adventure Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031B81D21E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure Game" */;
+			buildPhases = (
+				031B81A01E6D190500291790 /* Sources */,
+				031B81A11E6D190500291790 /* Frameworks */,
+				031B81A21E6D190500291790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bee Adventure Game";
+			productName = "Bee Adventure Game";
+			productReference = 031B81A41E6D190500291790 /* Bee Adventure Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		031B81BD1E6D190600291790 /* Bee Adventure GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031B81D51E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure GameTests" */;
+			buildPhases = (
+				031B81BA1E6D190600291790 /* Sources */,
+				031B81BB1E6D190600291790 /* Frameworks */,
+				031B81BC1E6D190600291790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				031B81C01E6D190600291790 /* PBXTargetDependency */,
+			);
+			name = "Bee Adventure GameTests";
+			productName = "Bee Adventure GameTests";
+			productReference = 031B81BE1E6D190600291790 /* Bee Adventure GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		031B81C81E6D190600291790 /* Bee Adventure GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031B81D81E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure GameUITests" */;
+			buildPhases = (
+				031B81C51E6D190600291790 /* Sources */,
+				031B81C61E6D190600291790 /* Frameworks */,
+				031B81C71E6D190600291790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				031B81CB1E6D190600291790 /* PBXTargetDependency */,
+			);
+			name = "Bee Adventure GameUITests";
+			productName = "Bee Adventure GameUITests";
+			productReference = 031B81C91E6D190600291790 /* Bee Adventure GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		031B819C1E6D190500291790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Josh/Matt/Jon;
+				TargetAttributes = {
+					031B81A31E6D190500291790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					031B81BD1E6D190600291790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 031B81A31E6D190500291790;
+					};
+					031B81C81E6D190600291790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 031B81A31E6D190500291790;
+					};
+				};
+			};
+			buildConfigurationList = 031B819F1E6D190500291790 /* Build configuration list for PBXProject "Bee Adventure Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 031B819B1E6D190500291790;
+			productRefGroup = 031B81A51E6D190500291790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				031B81A31E6D190500291790 /* Bee Adventure Game */,
+				031B81BD1E6D190600291790 /* Bee Adventure GameTests */,
+				031B81C81E6D190600291790 /* Bee Adventure GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		031B81A21E6D190500291790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C714301E78550600E77628 /* GameOverScene.sks in Resources */,
+				031B81E51E6D259600291790 /* Background-menu.png in Resources */,
+				0319695D1E7872B100109512 /* CropsBG.png in Resources */,
+				0373D1E21E76F59F0016699C /* MainMenu.sks in Resources */,
+				031969611E7878A700109512 /* BeeGirl.png in Resources */,
+				031969591E78700900109512 /* LeaderBoard.sks in Resources */,
+				0373D1DE1E76EBF80016699C /* LevelBg.jpg in Resources */,
+				031B81B31E6D190500291790 /* Main.storyboard in Resources */,
+				031B81AA1E6D190500291790 /* GameScene.sks in Resources */,
+				031B81DC1E6D1ACD00291790 /* Bee Comb.png in Resources */,
+				031B81B51E6D190500291790 /* Assets.xcassets in Resources */,
+				03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */,
+				031B81EB1E6D25C900291790 /* heart-full.png in Resources */,
+				031B81E91E6D25C400291790 /* button-menu.png in Resources */,
+				031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */,
+				0373D1E61E773D750016699C /* Settings.png in Resources */,
+				031B81E71E6D25BD00291790 /* button-restart.png in Resources */,
+				031B81AC1E6D190500291790 /* Actions.sks in Resources */,
+				031969631E78844400109512 /* HoneyCombBG.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81BC1E6D190600291790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81C71E6D190600291790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		031B81A01E6D190500291790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031B81AE1E6D190500291790 /* GameScene.swift in Sources */,
+				0319695F1E78750B00109512 /* LeaderBoard.swift in Sources */,
+				031B81B01E6D190500291790 /* GameViewController.swift in Sources */,
+				031B81A81E6D190500291790 /* AppDelegate.swift in Sources */,
+				03C714321E7855DA00E77628 /* GameOver.swift in Sources */,
+				0373D1E41E76F5D40016699C /* MainMenu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81BA1E6D190600291790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031B81C31E6D190600291790 /* Bee_Adventure_GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031B81C51E6D190600291790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031B81CE1E6D190600291790 /* Bee_Adventure_GameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		031B81C01E6D190600291790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 031B81A31E6D190500291790 /* Bee Adventure Game */;
+			targetProxy = 031B81BF1E6D190600291790 /* PBXContainerItemProxy */;
+		};
+		031B81CB1E6D190600291790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 031B81A31E6D190500291790 /* Bee Adventure Game */;
+			targetProxy = 031B81CA1E6D190600291790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		031B81B11E6D190500291790 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				031B81B21E6D190500291790 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		031B81B61E6D190500291790 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				031B81B71E6D190500291790 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		031B81D01E6D190600291790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		031B81D11E6D190600291790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		031B81D31E6D190600291790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Bee Adventure Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		031B81D41E6D190600291790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Bee Adventure Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		031B81D61E6D190600291790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bee Adventure GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee Adventure Game.app/Bee Adventure Game";
+			};
+			name = Debug;
+		};
+		031B81D71E6D190600291790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bee Adventure GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee Adventure Game.app/Bee Adventure Game";
+			};
+			name = Release;
+		};
+		031B81D91E6D190600291790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Bee Adventure GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Bee Adventure Game";
+			};
+			name = Debug;
+		};
+		031B81DA1E6D190600291790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Bee Adventure GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Matt-Jon.Bee-Adventure-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Bee Adventure Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		031B819F1E6D190500291790 /* Build configuration list for PBXProject "Bee Adventure Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031B81D01E6D190600291790 /* Debug */,
+				031B81D11E6D190600291790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031B81D21E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031B81D31E6D190600291790 /* Debug */,
+				031B81D41E6D190600291790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031B81D51E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031B81D61E6D190600291790 /* Debug */,
+				031B81D71E6D190600291790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031B81D81E6D190600291790 /* Build configuration list for PBXNativeTarget "Bee Adventure GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031B81D91E6D190600291790 /* Debug */,
+				031B81DA1E6D190600291790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 031B819C1E6D190500291790 /* Project object */;
+}
