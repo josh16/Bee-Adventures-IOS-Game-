@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */; };
 		031969591E78700900109512 /* LeaderBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031969581E78700900109512 /* LeaderBoard.sks */; };
 		0319695D1E7872B100109512 /* CropsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0319695C1E7872B100109512 /* CropsBG.png */; };
 		0319695F1E78750B00109512 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319695E1E78750B00109512 /* LeaderBoard.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LevelBg2.jpg; sourceTree = "<group>"; };
 		031969581E78700900109512 /* LeaderBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeaderBoard.sks; sourceTree = "<group>"; };
 		0319695C1E7872B100109512 /* CropsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CropsBG.png; sourceTree = "<group>"; };
 		0319695E1E78750B00109512 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				03C714331E78575600E77628 /* LeaderBoardButton.png */,
 				0373D1E51E773D750016699C /* Settings.png */,
 				0373D1DD1E76EBF80016699C /* LevelBg.jpg */,
+				03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */,
 				031B81EA1E6D25C900291790 /* heart-full.png */,
 				031B81E81E6D25C400291790 /* button-menu.png */,
 				031B81E61E6D25BD00291790 /* button-restart.png */,
@@ -332,6 +335,7 @@
 				03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */,
 				031B81EB1E6D25C900291790 /* heart-full.png in Resources */,
 				031B81E91E6D25C400291790 /* button-menu.png in Resources */,
+				03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */,
 				031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */,
 				0373D1E61E773D750016699C /* Settings.png in Resources */,
 				031B81E71E6D25BD00291790 /* button-restart.png in Resources */,
