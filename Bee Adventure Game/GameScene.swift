@@ -18,26 +18,35 @@ class GameScene: SKScene {
     
     var ground = SKSpriteNode();
     
+    
+    /*Sprite nodes that are needed
+    
+     Hearts...
+     Button for back to main menu...
+     Etc...
+    
+    */
        override func didMove(to view: SKView) {
         
         //Set up the Game Screen here for the background
         self.anchorPoint = CGPoint(x: 0.5, y: 1.0);
  
+        //Call the create backgrounds Functions
         createBackGrounds()
 
         
         
         //Create Player
         player = SKSpriteNode(imageNamed: "BeeGirl")
-        self.addChild(player) // adding the ground to the scene
         player.name = "BeeGirl"
-        player.zPosition = 1;
-        player.size = CGSize(width: 60.0, height: 60.0)
-        player.anchorPoint = CGPoint(x:player.frame.width / 2 - player.frame.width, y: self.frame.height / 2 )
+        player.zPosition = 1 // The Layer the player is on
+        player.size = CGSize(width: 140.0, height: 140.0) //Size of the character Sprite
         
+        //player.position = CGPoint(x: self.frame.width * 1.5 - player.frame.width, y:self.frame.height * 1.5)
         
-    
+        //Need to set the position of the player to a proper place on the screen
         
+         self.addChild(player) // adding the player to the scene
     }
     
     
@@ -58,7 +67,7 @@ class GameScene: SKScene {
         for i in 0...3
         {
             let ground = SKSpriteNode(imageNamed: "LevelBg")
-            //ground.zPosition = -1
+            ground.zPosition = 0
             ground.name = "LevelBg"
             ground.size = CGSize(width: (self.scene?.size.width)!, height:1350)
             ground.anchorPoint = CGPoint(x:0.5, y:0.5)
