@@ -18,14 +18,11 @@ class GameScene: SKScene {
     
     var ground = SKSpriteNode();
     
+    var heart = SKSpriteNode();
     
-    /*Sprite nodes that are needed
+    var menu = SKSpriteNode();
     
-     Hearts...
-     Button for back to main menu...
-     Etc...
-    
-    */
+
        override func didMove(to view: SKView) {
         
         //Set up the Game Screen here for the background
@@ -36,14 +33,26 @@ class GameScene: SKScene {
 
         
         
+        //Create Menu Button
+        menu = SKSpriteNode(imageNamed: "button-menu")
+        menu.name = "button-menu"
+        menu.zPosition = 1
+    
+        
+       
+        menu.size = CGSize(width: 120.0, height: 120.0)
+        self.addChild(menu)
+        
+        
+        
+        
         //Create Player
         player = SKSpriteNode(imageNamed: "BeeGirl")
         player.name = "BeeGirl"
         player.zPosition = 1 // The Layer the player is on
         player.size = CGSize(width: 140.0, height: 140.0) //Size of the character Sprite
         
-        //player.position = CGPoint(x: self.frame.width * 1.5 - player.frame.width, y:self.frame.height * 1.5)
-        
+        //TODO:
         //Need to set the position of the player to a proper place on the screen
         
          self.addChild(player) // adding the player to the scene
