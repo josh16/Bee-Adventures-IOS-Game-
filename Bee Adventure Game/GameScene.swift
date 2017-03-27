@@ -7,54 +7,40 @@
 //
 
 import SpriteKit
+import GameplayKit
 //import CoreGraphics
-//import GameplayKit
+
 
 class GameScene: SKScene {
-    
-    
+
     //Declared Variables
     var player = SKSpriteNode();
     
-    var ground = SKSpriteNode();
+    //Old background
+    //var ground = SKSpriteNode();
     
-    var heart = SKSpriteNode();
+    //New Background
+    var bg : SKSpriteNode?
+    var bg2 : SKSpriteNode?
     
-    var menu = SKSpriteNode();
+   
     
-
-       override func didMove(to view: SKView) {
+    override func didMove(to view: SKView) {
         
-        //Set up the Game Screen here for the background
-        self.anchorPoint = CGPoint(x: 0.5, y: 1.0);
- 
-        //Call the create backgrounds Functions
-        createBackGrounds()
-
-        
-        
-        //Create Menu Button
-        menu = SKSpriteNode(imageNamed: "button-menu")
-        menu.name = "button-menu"
-        menu.zPosition = 1
-    
-        
-       
-        menu.size = CGSize(width: 120.0, height: 120.0)
-        self.addChild(menu)
-        
+        //new Background as new node
+        bg = self.childNode(withName: "Bg") as! SKSpriteNode?
+        bg2 = self.childNode(withName: "Bg2") as! SKSpriteNode?
         
         
         
         //Create Player
         player = SKSpriteNode(imageNamed: "BeeGirl")
         player.name = "BeeGirl"
-        player.zPosition = 1 // The Layer the player is on
-        player.size = CGSize(width: 140.0, height: 140.0) //Size of the character Sprite
-        
-        //TODO:
-        //Need to set the position of the player to a proper place on the screen
-        
+        player.zPosition = 2 // The Layer the player is on
+        //player.position = CGPoint(x: -10.0, y: 0.0)
+        player.size = CGSize(width: 70.0, height: 70.0) //Size of
+        player.anchorPoint = CGPoint(x: 2.2, y:0.0 )
+
          self.addChild(player) // adding the player to the scene
     }
     
@@ -63,52 +49,37 @@ class GameScene: SKScene {
     override func update(_ currentTime: CFTimeInterval) {
         
         //Calling the function in update
-        moveBackGrounds();
+       MoveBackground()
+        
+      
+        /*
+        
+        let newPos = (bg?.position.x)! + -0.8
+        print(bg?.position.x)
+        bg?.position.x = newPos
+        print(newPos)
+    
+    */
+    
     }
     
+ 
     
-    
-    //Function for creating the backgrounds
-    func createBackGrounds()
+    func MoveBackground()
     {
+       
         
-        //Loop the different backgrounds
-        for i in 0...3
-        {
-            let ground = SKSpriteNode(imageNamed: "LevelBg")
-            ground.zPosition = 0
-            ground.name = "LevelBg"
-            ground.size = CGSize(width: (self.scene?.size.width)!, height:1350)
-            ground.anchorPoint = CGPoint(x:0.5, y:0.5)
-            ground.position = CGPoint(x: CGFloat(i) * ground.size.width, y: -(self.frame.size.height / 2))
-            
-            
-            self.addChild(ground) // adding the ground to the scene
-            
-        }
-        
-        
-    }
-    
-    //Function for moving the different backgrounds
-    func moveBackGrounds()
-    {
-     
-        self.enumerateChildNodes(withName: "LevelBg", using:({
+        self.enumerateChildNodes(withName: "Bg" , using:({
             (node,error) in
             
             node.position.x -= 3 // subtract the pos by 2
-            
             if node.position.x < -((self.scene?.size.width)!) {
-                node.position.x += (self.scene?.size.width)! * 3
+                node.position.x += (self.scene?.size.width)! * 2
             }
             
         }))
-    
         
     }
-    
-
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -118,12 +89,12 @@ class GameScene: SKScene {
         {
             let location = touch.location(in: self);
             
-            //Moving the player on teh screen
+            //Moving the player on the screen
             player.run(SKAction.moveTo(y: location.y, duration: 0.2))
             
-            //MainMenu Code
+     
+            
             if atPoint(location).name == "TheMenu"{
-                
                 
                 if let scene = MainMenu(fileNamed: "MainMenu") {
                     // Set the scale mode to scale to fit the window
@@ -131,16 +102,9 @@ class GameScene: SKScene {
                     
                     // Present the scene
                     view!.presentScene(scene, transition: SKTransition.doorsOpenVertical(withDuration: TimeInterval(2)))
-                    
-                    
                 }
                 
-                
-                
             }
-            
-         
-            
         
         }
         
@@ -151,19 +115,17 @@ class GameScene: SKScene {
         
         for touch in touches
         {
+        
             
+          
             let location = touch.location(in: self);
+            
+    
             
             player.run(SKAction.moveTo(y: location.y, duration: 0.2))
             
         }
         
-        
-        
     }
-    
-    
-    
-    
-    
+
 }
