@@ -17,6 +17,10 @@ class GameScene: SKScene {
     var player = SKSpriteNode();
     var enemy = SKSpriteNode();
     
+    //Array code
+    var bgArray = [SKSpriteNode] ()// Array of backgrounds (Sprites)
+
+    
     //Old background
     //var ground = SKSpriteNode();
     
@@ -25,12 +29,18 @@ class GameScene: SKScene {
     var bg2 : SKSpriteNode?
     
    
-    
     override func didMove(to view: SKView) {
         
         //new Background as new node
         bg = self.childNode(withName: "Bg") as! SKSpriteNode?
         bg2 = self.childNode(withName: "Bg2") as! SKSpriteNode?
+        
+        
+        //Adding the backgrounds to the array
+        bgArray.append((self.childNode(withName: "Bg") as! SKSpriteNode?)!)
+        bgArray.append((self.childNode(withName: "Bg2") as! SKSpriteNode?)!)
+
+        
         
         
         //Create Player
@@ -47,9 +57,8 @@ class GameScene: SKScene {
     //Update function
     override func update(_ currentTime: CFTimeInterval) {
         
-        //Calling the function in update
        MoveBackground()
-       // SpawnEnemy()
+       
       
         /*
         
@@ -62,9 +71,7 @@ class GameScene: SKScene {
     
     }
     
- 
-    
-    
+
     
     
     //Spawn Enemy Function (Doesn't work yet)
@@ -82,11 +89,17 @@ class GameScene: SKScene {
     
     
     
-    
+    //Code for getting the background to move
     func MoveBackground()
     {
        
         
+        //for loop goes here...
+        
+        
+       
+        
+        /*
         self.enumerateChildNodes(withName: "Bg" , using:({
             (node,error) in
             
@@ -96,7 +109,7 @@ class GameScene: SKScene {
             }
             
         }))
-        
+        */
     }
     
     
@@ -134,11 +147,7 @@ class GameScene: SKScene {
         for touch in touches
         {
         
-            
-          
             let location = touch.location(in: self);
-            
-    
             
             player.run(SKAction.moveTo(y: location.y, duration: 0.2))
             
