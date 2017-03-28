@@ -15,6 +15,7 @@ class GameScene: SKScene {
 
     //Declared Variables
     var player = SKSpriteNode();
+    var enemy = SKSpriteNode();
     
     //Old background
     //var ground = SKSpriteNode();
@@ -32,12 +33,10 @@ class GameScene: SKScene {
         bg2 = self.childNode(withName: "Bg2") as! SKSpriteNode?
         
         
-        
         //Create Player
         player = SKSpriteNode(imageNamed: "BeeGirl")
         player.name = "BeeGirl"
         player.zPosition = 2 // The Layer the player is on
-        //player.position = CGPoint(x: -10.0, y: 0.0)
         player.size = CGSize(width: 70.0, height: 70.0) //Size of
         player.anchorPoint = CGPoint(x: 2.2, y:0.0 )
 
@@ -50,7 +49,7 @@ class GameScene: SKScene {
         
         //Calling the function in update
        MoveBackground()
-        
+       // SpawnEnemy()
       
         /*
         
@@ -64,6 +63,25 @@ class GameScene: SKScene {
     }
     
  
+    
+    
+    
+    
+    //Spawn Enemy Function (Doesn't work yet)
+    func SpawnEnemy()
+    {
+        //Create Player
+        enemy = SKSpriteNode(imageNamed: "BeeComb")
+        enemy.name = "BeeComb"
+        enemy.zPosition = 2 // The Layer the enemy is on
+        enemy.size = CGSize(width: 70.0, height: 70.0)
+        enemy.anchorPoint = CGPoint(x: 0.0, y:0.0 )
+        
+        self.addChild(player)
+    }
+    
+    
+    
     
     func MoveBackground()
     {
