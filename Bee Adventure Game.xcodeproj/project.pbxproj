@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306354C1E89C8690072F589 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0306354B1E89C8690072F589 /* GameScene.sks */; };
 		03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */; };
 		031969591E78700900109512 /* LeaderBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031969581E78700900109512 /* LeaderBoard.sks */; };
 		0319695D1E7872B100109512 /* CropsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0319695C1E7872B100109512 /* CropsBG.png */; };
@@ -14,14 +15,12 @@
 		031969611E7878A700109512 /* BeeGirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 031969601E7878A700109512 /* BeeGirl.png */; };
 		031969631E78844400109512 /* HoneyCombBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 031969621E78844400109512 /* HoneyCombBG.png */; };
 		031B81A81E6D190500291790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81A71E6D190500291790 /* AppDelegate.swift */; };
-		031B81AA1E6D190500291790 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031B81A91E6D190500291790 /* GameScene.sks */; };
 		031B81AC1E6D190500291790 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031B81AB1E6D190500291790 /* Actions.sks */; };
 		031B81AE1E6D190500291790 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81AD1E6D190500291790 /* GameScene.swift */; };
 		031B81B01E6D190500291790 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81AF1E6D190500291790 /* GameViewController.swift */; };
 		031B81B31E6D190500291790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B11E6D190500291790 /* Main.storyboard */; };
 		031B81B51E6D190500291790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B41E6D190500291790 /* Assets.xcassets */; };
 		031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031B81B61E6D190500291790 /* LaunchScreen.storyboard */; };
-		031B81C31E6D190600291790 /* Bee_Adventure_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */; };
 		031B81CE1E6D190600291790 /* Bee_Adventure_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B81CD1E6D190600291790 /* Bee_Adventure_GameUITests.swift */; };
 		031B81DC1E6D1ACD00291790 /* Bee Comb.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81DB1E6D1ACD00291790 /* Bee Comb.png */; };
 		031B81E51E6D259600291790 /* Background-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B81E41E6D259600291790 /* Background-menu.png */; };
@@ -55,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0306354B1E89C8690072F589 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LevelBg2.jpg; sourceTree = "<group>"; };
 		031969581E78700900109512 /* LeaderBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeaderBoard.sks; sourceTree = "<group>"; };
 		0319695C1E7872B100109512 /* CropsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CropsBG.png; sourceTree = "<group>"; };
@@ -63,7 +63,6 @@
 		031969621E78844400109512 /* HoneyCombBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HoneyCombBG.png; sourceTree = "<group>"; };
 		031B81A41E6D190500291790 /* Bee Adventure Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bee Adventure Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		031B81A71E6D190500291790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		031B81A91E6D190500291790 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = "Bee Adventure Game/GameScene.sks"; sourceTree = "<group>"; };
 		031B81AB1E6D190500291790 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		031B81AD1E6D190500291790 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "Bee Adventure Game/GameScene.swift"; sourceTree = "<group>"; };
 		031B81AF1E6D190500291790 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		031B81B71E6D190500291790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		031B81B91E6D190500291790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		031B81BE1E6D190600291790 /* Bee Adventure GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bee Adventure GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee_Adventure_GameTests.swift; sourceTree = "<group>"; };
 		031B81C41E6D190600291790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		031B81C91E6D190600291790 /* Bee Adventure GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bee Adventure GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		031B81CD1E6D190600291790 /* Bee_Adventure_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee_Adventure_GameUITests.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		031B81C11E6D190600291790 /* Bee Adventure GameTests */ = {
 			isa = PBXGroup;
 			children = (
-				031B81C21E6D190600291790 /* Bee_Adventure_GameTests.swift */,
 				031B81C41E6D190600291790 /* Info.plist */,
 			);
 			path = "Bee Adventure GameTests";
@@ -206,8 +203,8 @@
 		0373D1ED1E7743380016699C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				031B81A91E6D190500291790 /* GameScene.sks */,
 				0373D1E11E76F59F0016699C /* MainMenu.sks */,
+				0306354B1E89C8690072F589 /* GameScene.sks */,
 				03C7142F1E78550600E77628 /* GameOverScene.sks */,
 				031969581E78700900109512 /* LeaderBoard.sks */,
 			);
@@ -329,7 +326,6 @@
 				031969591E78700900109512 /* LeaderBoard.sks in Resources */,
 				0373D1DE1E76EBF80016699C /* LevelBg.jpg in Resources */,
 				031B81B31E6D190500291790 /* Main.storyboard in Resources */,
-				031B81AA1E6D190500291790 /* GameScene.sks in Resources */,
 				031B81DC1E6D1ACD00291790 /* Bee Comb.png in Resources */,
 				031B81B51E6D190500291790 /* Assets.xcassets in Resources */,
 				03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */,
@@ -338,6 +334,7 @@
 				03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */,
 				031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */,
 				0373D1E61E773D750016699C /* Settings.png in Resources */,
+				0306354C1E89C8690072F589 /* GameScene.sks in Resources */,
 				031B81E71E6D25BD00291790 /* button-restart.png in Resources */,
 				031B81AC1E6D190500291790 /* Actions.sks in Resources */,
 				031969631E78844400109512 /* HoneyCombBG.png in Resources */,
@@ -378,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031B81C31E6D190600291790 /* Bee_Adventure_GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
