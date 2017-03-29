@@ -31,6 +31,7 @@
 		0373D1E21E76F59F0016699C /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E11E76F59F0016699C /* MainMenu.sks */; };
 		0373D1E41E76F5D40016699C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373D1E31E76F5D40016699C /* MainMenu.swift */; };
 		0373D1E61E773D750016699C /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E51E773D750016699C /* Settings.png */; };
+		03C04E391E8B2B50009A0710 /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C04E381E8B2B50009A0710 /* bird.png */; };
 		03C714301E78550600E77628 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03C7142F1E78550600E77628 /* GameOverScene.sks */; };
 		03C714321E7855DA00E77628 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C714311E7855DA00E77628 /* GameOver.swift */; };
 		03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C714331E78575600E77628 /* LeaderBoardButton.png */; };
@@ -84,6 +85,7 @@
 		0373D1E11E76F59F0016699C /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		0373D1E31E76F5D40016699C /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		0373D1E51E773D750016699C /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		03C04E381E8B2B50009A0710 /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
 		03C7142F1E78550600E77628 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 		03C714311E7855DA00E77628 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		03C714331E78575600E77628 /* LeaderBoardButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeaderBoardButton.png; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				031B81AF1E6D190500291790 /* GameViewController.swift */,
 				031B81B11E6D190500291790 /* Main.storyboard */,
 				031B81B41E6D190500291790 /* Assets.xcassets */,
+				03C04E381E8B2B50009A0710 /* bird.png */,
 				031969621E78844400109512 /* HoneyCombBG.png */,
 				031969601E7878A700109512 /* BeeGirl.png */,
 				0319695C1E7872B100109512 /* CropsBG.png */,
@@ -323,6 +326,7 @@
 				0319695D1E7872B100109512 /* CropsBG.png in Resources */,
 				0373D1E21E76F59F0016699C /* MainMenu.sks in Resources */,
 				031969611E7878A700109512 /* BeeGirl.png in Resources */,
+				03C04E391E8B2B50009A0710 /* bird.png in Resources */,
 				031969591E78700900109512 /* LeaderBoard.sks in Resources */,
 				0373D1DE1E76EBF80016699C /* LevelBg.jpg in Resources */,
 				031B81B31E6D190500291790 /* Main.storyboard in Resources */,
