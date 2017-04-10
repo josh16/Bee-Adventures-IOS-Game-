@@ -12,13 +12,21 @@ import CoreGraphics
 import AVFoundation //audio library, SKACTION.play name
 
 
-class GameScene: SKScene {
+class GameScene: SKScene,SKPhysicsContactDelegate {
 
     //SpriteNode Variables
     var player = SKSpriteNode();
     var enemy = SKSpriteNode();
     
+    //Each category will be associated with a specific value
+    struct PhysicsCategory
+    {
+        static let PLAYER :UInt32 = 0x1 << 0
+        static let ENEMY  :UInt32 = 0x1 << 1
+        //static let WALL   :UInt32  = 0x1 << 2
+    }
     
+  
     //Audio Reference Variables
     
     
@@ -57,14 +65,42 @@ class GameScene: SKScene {
         let border = SKPhysicsBody(edgeLoopFrom: (view.scene?.frame)!)
         border.friction = 0
         self.physicsBody = border
+      
+        //Delegates all the contacts that go in in the view
+        self.physicsWorld.contactDelegate = self
+        
+        //Contact Function for physics
+        func didBeginContact(contact:SKPhysicsContact)
+        {
+            let firstBody = contact.bodyA.node as! SKSpriteNode
+            let secondBody = contact.bodyB.node as! SKSpriteNode
+        
+            
+            if((firstBody.name == "Enemy") && (secondBody.name == "Player"))
+            {
+                collisionEnemy(enemy: firstBody, player:secondBody)
+                
+            }
+            else if ((firstBody.name == "Player") && (secondBody.name == "Enemy"))
+            {
+                collisionEnemy(enemy:secondBody, player: firstBody)
+            }
+        }
+        
+        
+        //EnemyCollision
+        func collisionEnemy(enemy:SKSpriteNode,player:SKSpriteNode)
+        {
+            enemy.physicsBody?.affectedByGravity = true
+            enemy.physicsBody?.isDynamic = true
+            enemy.physicsBody?.mass = 4.0 // how fast the enemy will drop.
+            player.physicsBody?.mass = 4.0
+        }
+            
+         
         
         
         //Create the Player
-        
-        //two types of masks for collision
-        //A mask that detects collison
-        //A mask that notifies you that a collision happend
-        
         player = SKSpriteNode(imageNamed: "BeeGirl")
         player.name = "BeeGirl"
         player.zPosition = 3 // The Layer the player is on
@@ -74,12 +110,22 @@ class GameScene: SKScene {
         //Physics body for the player
         player.physicsBody = SKPhysicsBody(rectangleOf: CGSize( width:player.size.width, height: player.size.width))
        
+      //Physics Contact Code
+        player.physicsBody?.categoryBitMask = PhysicsCategory.PLAYER
+        player.physicsBody?.collisionBitMask = PhysicsCategory.ENEMY
+        player.physicsBody?.contactTestBitMask = PhysicsCategory.ENEMY
+        player.name = "Player"
         player.physicsBody?.affectedByGravity = false
+        player.physicsBody?.isDynamic = false;
+        
+        
         
         
          self.addChild(player) // adding the player to the scene
     }
     
+    
+    //Spawn Interval for the enemy character
     //Time interval of last Spawn
     var lastSpawn: CFTimeInterval=0
     
@@ -109,6 +155,7 @@ class GameScene: SKScene {
     //Spawn Enemy Function
     func SpawnEnemy()
     {
+        //Object pooling maybe?
         let Enemy = SKSpriteNode(imageNamed:"bird.png");
         Enemy.zPosition = 3
         Enemy.size = CGSize(width: 70, height: 70)
@@ -127,6 +174,16 @@ class GameScene: SKScene {
         
          //*Need a method to destroy the enemy overtime
         
+        
+        
+        //Physics
+        enemy.physicsBody = SKPhysicsBody(rectangleOf: CGSize( width:enemy.size.width, height: enemy.size.width))
+        enemy.physicsBody?.categoryBitMask = PhysicsCategory.ENEMY
+        enemy.physicsBody?.contactTestBitMask = PhysicsCategory.PLAYER
+        enemy.physicsBody?.collisionBitMask = PhysicsCategory.PLAYER
+        enemy.physicsBody?.isDynamic = false
+        enemy.physicsBody?.affectedByGravity = false
+        enemy.name = "Enemy"
         
     }
     
