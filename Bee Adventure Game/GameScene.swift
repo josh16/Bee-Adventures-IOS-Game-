@@ -16,8 +16,16 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
 
     //SpriteNode Variables
     var player: SKSpriteNode!;
-    var honey: SKSpriteNode!;
     var hearts = [SKSpriteNode]();
+    
+    
+    //Score references
+    var ScoreLabel = SKLabelNode();
+    var m_score: Int = 0
+    
+
+    //HighScore Reference Variables
+    //This method will be inside the Leaderboard sks file
     
     //Heart counter
     var m_heartCounter = 3
@@ -36,13 +44,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
   
     //Audio Reference Variables
     
-    
-    //Score Reference Variables
-    
-    
-    //HighScore Reference Variables
-    
-    
+   
     
     //Background SpriteNbodes
     var bg = SKSpriteNode(imageNamed:"LevelBg")
@@ -53,7 +55,14 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     //Did move function
     override func didMove(to view: SKView) {
         
-    
+        //Score set to 0 at the start of the Game
+        m_score = 0
+        
+        
+        //Score label reference
+        ScoreLabel = self.childNode(withName: "ScoreLabel") as! SKLabelNode;
+        
+        
         //Background Positions BG1 and BG2
         bg.anchorPoint = CGPoint(x: 0, y: 0)
         bg.position = CGPoint(x: -200, y: -300)
@@ -88,7 +97,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         player = SKSpriteNode(imageNamed: "BeeGirl")
         player.name = "BeeGirl"
         player.zPosition = 3 // The Layer the player is on
-        player.size = CGSize(width: 70.0, height: 70.0) //Size of Player
+        player.size = CGSize(width: 70.0, height: 70.0)
         
         //Player Physics
         player.physicsBody = SKPhysicsBody(rectangleOf: CGSize( width:player.size.width, height: player.size.width))
@@ -110,6 +119,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         player.position = CGPoint(x: -100, y: 0)
     }
     
+    //Function for contact with physics
     func didBegin(_ contact: SKPhysicsContact) {
         let firstBody = contact.bodyA.node as? SKSpriteNode
         let secondBody = contact.bodyB.node as? SKSpriteNode
@@ -149,24 +159,49 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                     scene.scaleMode = .aspectFill
                     
                     // Present the scene
-                    view!.presentScene(scene, transition: SKTransition.doorsOpenVertical(withDuration: TimeInterval(2)))
-                    
+                    view!.presentScene(scene, transition:
+                    SKTransition.crossFade(withDuration: TimeInterval(2)))
+                    }
+            
                 }
-
+            
+            }
+        
+        //Honey Comb Collision
+        if((firstBody?.name == "Honey") && (secondBody?.name == "Player") || (firstBody?.name == "Player") && (secondBody?.name == "Honey"))
+        {
+            //Remove Honey and than add to score
+            if(firstBody?.name == "Honey")
+            {
+                
+                firstBody?.removeFromParent()
                 
                 
             }
+                
+                
+            else if(secondBody?.name == "Honey")
+            {
+                
+                //Increment score
+                m_score += 10
+                secondBody?.removeFromParent()
+                
+            }
             
-            
-            
+            //Update score Label
+             ScoreLabel.text = "\(m_score)";
         }
+
+        
+        
         
     }
 
     
     //Spawn Interval for the enemy character
     //Time interval of last Spawn
-    var lastSpawn: CFTimeInterval=0
+    var lastSpawn: CFTimeInterval = 0
     
     //Time interval for enemy to spawn
     var interval:CFTimeInterval = 10
@@ -174,6 +209,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     //Update function
     override func update(_ currentTime: CFTimeInterval) {
        
+        
         MoveBackground()
         
         //Reference to Enemy Spawn
@@ -182,8 +218,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         if currentTime-lastSpawn>interval{
             print("current:\(currentTime), last: \(lastSpawn)\n")
             SpawnEnemy()
+            SpawnHoney()
+            
             lastSpawn = currentTime
-            interval = CFTimeInterval( arc4random_uniform(5) )
+            interval = CFTimeInterval( arc4random_uniform(5))
         }
        
     }
@@ -227,14 +265,39 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
 
     }
     
-    
+    //Spawn Honey function
     func SpawnHoney()
     {
         
         let Honey = SKSpriteNode(imageNamed: "Bee Comb")
         Honey.zPosition = 3
         Honey.size = CGSize(width: 50, height: 50)
+        
+        //Min and max values of where Honey Spawns
+        let Min = self.size.width - 250
+        let Max = self.size.width + 250
 
+        //Honey Spawn Point
+        let spawnPoint = UInt32(Max-Min) // Spawn Range
+        Honey.position = CGPoint(x: (view?.frame.width)!/2, y: CGFloat(arc4random_uniform(spawnPoint))-250)
+        
+        print(spawnPoint)
+        
+        //Method for enemy to spawn forever
+        Honey.run(SKAction.repeatForever( SKAction.moveBy(x: -50, y: 0, duration: 1)))
+        
+        self.addChild(Honey)
+
+        
+        //Honey Physics
+        Honey.physicsBody = SKPhysicsBody(rectangleOf: CGSize( width:Honey.size.width, height: Honey.size.width))
+        Honey.physicsBody?.categoryBitMask = PhysicsCategory.HONEY
+        Honey.physicsBody?.contactTestBitMask = PhysicsCategory.PLAYER
+        Honey.physicsBody?.collisionBitMask = PhysicsCategory.PLAYER
+        Honey.physicsBody?.isDynamic = true
+        Honey.physicsBody?.affectedByGravity = false
+        Honey.name = "Honey"
+        
         
     }
     
@@ -292,6 +355,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     }
 
     //Touches Moved function
+    
     // Movement Code when player touches the screen
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
