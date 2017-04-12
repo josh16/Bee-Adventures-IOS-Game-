@@ -22,6 +22,9 @@ class GameOver: SKScene {
             //Main Menu Code
             if atPoint(location).name == "TheMenu"{
                 
+                //Going back Audio
+                self.run(SKAction.playSoundFileNamed("Pickup_Coin9", waitForCompletion: false))
+                
                 if let scene = MainMenu(fileNamed: "MainMenu") {
                     // Set the scale mode to scale to fit the window
                     scene.scaleMode = .aspectFill
@@ -38,7 +41,12 @@ class GameOver: SKScene {
             //LeaderBoard Code
             if atPoint(location2).name == "LeaderBoardButton"{
                 
-                if let scene = LeaderBoard(fileNamed: "LeaderButton") {
+                //Going forward Audio
+                self.run(SKAction.playSoundFileNamed("Pickup_Coin5", waitForCompletion: false))
+                
+                
+                
+              if let scene = LeaderBoard(fileNamed: "LeaderBoard") {
                     // Set the scale mode to scale to fit the window
                     scene.scaleMode = .aspectFill
                     

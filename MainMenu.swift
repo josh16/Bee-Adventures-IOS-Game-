@@ -22,6 +22,9 @@ class MainMenu: SKScene{
         
             //Game Scene Code
             if atPoint(location).name == "Go"{
+                
+                self.run(SKAction.playSoundFileNamed("Pickup_Coin5", waitForCompletion: false))
+
             
             if let scene = GameScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
@@ -40,6 +43,10 @@ class MainMenu: SKScene{
         
             //LeaderBoard Code
             if atPoint(location2).name == "LeaderBoardButton"{
+                
+                //Going forward Audio
+                self.run(SKAction.playSoundFileNamed("Pickup_Coin5", waitForCompletion: false))
+                
                 
                 if let scene = LeaderBoard(fileNamed: "LeaderBoard") {
                     // Set the scale mode to scale to fit the window

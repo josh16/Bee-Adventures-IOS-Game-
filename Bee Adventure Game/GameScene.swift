@@ -9,21 +9,20 @@
 import SpriteKit
 import GameplayKit
 import CoreGraphics
-import AVFoundation //audio library, SKACTION.play name
+import AVFoundation //Audio library, SKACTION.play name
 
 
-class GameScene: SKScene,SKPhysicsContactDelegate {
+class GameScene: SKScene,SKPhysicsContactDelegate,AVAudioPlayerDelegate {
 
     //SpriteNode Variables
-    var player: SKSpriteNode!;
-    var hearts = [SKSpriteNode]();
+    var player: SKSpriteNode!
+    var hearts = [SKSpriteNode]()//Array of hearts
     
     
     //Score references
-    var ScoreLabel = SKLabelNode();
+    var ScoreLabel = SKLabelNode()
     var m_score: Int = 0
     
-
     //HighScore Reference Variables
     //This method will be inside the Leaderboard sks file
     
@@ -40,11 +39,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
      
     }
     
-    
-  
-    //Audio Reference Variables
-    
-   
+
     
     //Background SpriteNbodes
     var bg = SKSpriteNode(imageNamed:"LevelBg")
@@ -55,7 +50,14 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     //Did move function
     override func didMove(to view: SKView) {
         
-        //Score set to 0 at the start of the Game
+        //Audio reference for BGM
+        let bgm:SKAudioNode = SKAudioNode(fileNamed: "AdhesiveWombat - 8 Bit Adventure.mp3")
+        //Continous loop
+        bgm.autoplayLooped = true
+        //Add audiofile to scene
+        self.addChild(bgm)
+
+        //Set score to zero at the start of the game
         m_score = 0
         
         
@@ -132,8 +134,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             //Remove Heart
             if(firstBody?.name == "Enemy")
             {
+                
                 firstBody?.removeFromParent()
-            
+                
                 hearts[m_heartCounter - 1].removeFromParent()
                 hearts.remove(at: m_heartCounter - 1)
                 m_heartCounter = m_heartCounter - 1
@@ -144,13 +147,17 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             else if(secondBody?.name == "Enemy")
             {
                 secondBody?.removeFromParent()
+                
+                //Audio sound of getting hit
+                self.run(SKAction.playSoundFileNamed("Hit_Hurt26", waitForCompletion: false))
+                
                 hearts[m_heartCounter - 1].removeFromParent()
                 hearts.remove(at: m_heartCounter - 1)
                 m_heartCounter = m_heartCounter - 1
                 
             }
             
-            //Game Over when hearts reach 0
+            //Game Over when hearts reach 0, loads new scene
             if(m_heartCounter <= 0)
             {
                 // go to game over Scene
@@ -187,6 +194,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                 m_score += 10
                 secondBody?.removeFromParent()
                 
+                //Audio sound of Collecting Honey
+                self.run(SKAction.playSoundFileNamed("Powerup41", waitForCompletion: false))
+            
             }
             
             //Update score Label
@@ -208,7 +218,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
    
     //Update function
     override func update(_ currentTime: CFTimeInterval) {
-       
+        
+        //Play BGM Music
+      
+        
+
         
         MoveBackground()
         
@@ -235,7 +249,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         //Object pooling maybe?
         let Enemy = SKSpriteNode(imageNamed:"bird.png");
         Enemy.zPosition = 3
-        Enemy.size = CGSize(width: 70, height: 70)
+        Enemy.size = CGSize(width: 50, height: 50)
         
         //Min and max values of where enemy can spawn on the screen
         let Min = self.size.width - 250
@@ -299,6 +313,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         Honey.name = "Honey"
         
         
+        
     }
     
     
@@ -340,6 +355,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             
             if atPoint(location).name == "TheMenu"{
                 
+                //Audio,back to menu
+            self.run(SKAction.playSoundFileNamed("Pickup_Coin9", waitForCompletion: false))
+
+                
+                
                 if let scene = MainMenu(fileNamed: "MainMenu") {
                     // Set the scale mode to scale to fit the window
                     scene.scaleMode = .aspectFill
@@ -354,7 +374,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         
     }
 
-    //Touches Moved function
+    
     
     // Movement Code when player touches the screen
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

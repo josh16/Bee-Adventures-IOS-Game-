@@ -19,6 +19,9 @@ class LeaderBoard: SKScene {
             
             if atPoint(location).name == "TheMenu"{
                 
+                //Going back Audio
+                self.run(SKAction.playSoundFileNamed("Pickup_Coin9", waitForCompletion: false))
+                
                 if let scene = MainMenu(fileNamed: "MainMenu") {
                     // Set the scale mode to scale to fit the window
                     scene.scaleMode = .aspectFill
