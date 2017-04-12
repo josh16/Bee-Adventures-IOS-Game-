@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0306354C1E89C8690072F589 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0306354B1E89C8690072F589 /* GameScene.sks */; };
+		0306F7821E9DACCB00FCF054 /* YellowBall.png in Resources */ = {isa = PBXBuildFile; fileRef = 0306F7811E9DACCB00FCF054 /* YellowBall.png */; };
+		0306F7841E9DB03800FCF054 /* CombDesign.png in Resources */ = {isa = PBXBuildFile; fileRef = 0306F7831E9DB03800FCF054 /* CombDesign.png */; };
+		0306F7861E9DB10200FCF054 /* CombBg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0306F7851E9DB10200FCF054 /* CombBg2.png */; };
 		03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */; };
 		031969591E78700900109512 /* LeaderBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 031969581E78700900109512 /* LeaderBoard.sks */; };
 		0319695D1E7872B100109512 /* CropsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0319695C1E7872B100109512 /* CropsBG.png */; };
@@ -31,10 +34,15 @@
 		0373D1E21E76F59F0016699C /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E11E76F59F0016699C /* MainMenu.sks */; };
 		0373D1E41E76F5D40016699C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373D1E31E76F5D40016699C /* MainMenu.swift */; };
 		0373D1E61E773D750016699C /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0373D1E51E773D750016699C /* Settings.png */; };
+		03B6160A1E9C94A500D54F5C /* Hit_Hurt26.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03B616091E9C94A500D54F5C /* Hit_Hurt26.wav */; };
+		03B6160C1E9C94B600D54F5C /* Powerup41.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03B6160B1E9C94B600D54F5C /* Powerup41.wav */; };
+		03B6160E1E9C960F00D54F5C /* AdhesiveWombat - 8 Bit Adventure.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 03B6160D1E9C960F00D54F5C /* AdhesiveWombat - 8 Bit Adventure.mp3 */; };
 		03C04E391E8B2B50009A0710 /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C04E381E8B2B50009A0710 /* bird.png */; };
 		03C714301E78550600E77628 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03C7142F1E78550600E77628 /* GameOverScene.sks */; };
 		03C714321E7855DA00E77628 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C714311E7855DA00E77628 /* GameOver.swift */; };
 		03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C714331E78575600E77628 /* LeaderBoardButton.png */; };
+		03E9D7B31E9DA47B003460CE /* Pickup_Coin9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03E9D7B21E9DA47B003460CE /* Pickup_Coin9.wav */; };
+		03E9D7B51E9DA485003460CE /* Pickup_Coin5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03E9D7B41E9DA485003460CE /* Pickup_Coin5.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		0306354B1E89C8690072F589 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		0306F7811E9DACCB00FCF054 /* YellowBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowBall.png; sourceTree = "<group>"; };
+		0306F7831E9DB03800FCF054 /* CombDesign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CombDesign.png; sourceTree = "<group>"; };
+		0306F7851E9DB10200FCF054 /* CombBg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CombBg2.png; sourceTree = "<group>"; };
 		03108D1F1E80AC12006C7EB8 /* LevelBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LevelBg2.jpg; sourceTree = "<group>"; };
 		031969581E78700900109512 /* LeaderBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeaderBoard.sks; sourceTree = "<group>"; };
 		0319695C1E7872B100109512 /* CropsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CropsBG.png; sourceTree = "<group>"; };
@@ -85,10 +96,15 @@
 		0373D1E11E76F59F0016699C /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		0373D1E31E76F5D40016699C /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		0373D1E51E773D750016699C /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		03B616091E9C94A500D54F5C /* Hit_Hurt26.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hit_Hurt26.wav; sourceTree = "<group>"; };
+		03B6160B1E9C94B600D54F5C /* Powerup41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup41.wav; sourceTree = "<group>"; };
+		03B6160D1E9C960F00D54F5C /* AdhesiveWombat - 8 Bit Adventure.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "AdhesiveWombat - 8 Bit Adventure.mp3"; sourceTree = "<group>"; };
 		03C04E381E8B2B50009A0710 /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
 		03C7142F1E78550600E77628 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 		03C714311E7855DA00E77628 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		03C714331E78575600E77628 /* LeaderBoardButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeaderBoardButton.png; sourceTree = "<group>"; };
+		03E9D7B21E9DA47B003460CE /* Pickup_Coin9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pickup_Coin9.wav; sourceTree = "<group>"; };
+		03E9D7B41E9DA485003460CE /* Pickup_Coin5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pickup_Coin5.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +162,9 @@
 				031B81AF1E6D190500291790 /* GameViewController.swift */,
 				031B81B11E6D190500291790 /* Main.storyboard */,
 				031B81B41E6D190500291790 /* Assets.xcassets */,
+				0306F7851E9DB10200FCF054 /* CombBg2.png */,
+				0306F7831E9DB03800FCF054 /* CombDesign.png */,
+				0306F7811E9DACCB00FCF054 /* YellowBall.png */,
 				03C04E381E8B2B50009A0710 /* bird.png */,
 				031969621E78844400109512 /* HoneyCombBG.png */,
 				031969601E7878A700109512 /* BeeGirl.png */,
@@ -198,6 +217,11 @@
 		031B81E31E6D24A900291790 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				03E9D7B41E9DA485003460CE /* Pickup_Coin5.wav */,
+				03E9D7B21E9DA47B003460CE /* Pickup_Coin9.wav */,
+				03B6160D1E9C960F00D54F5C /* AdhesiveWombat - 8 Bit Adventure.mp3 */,
+				03B6160B1E9C94B600D54F5C /* Powerup41.wav */,
+				03B616091E9C94A500D54F5C /* Hit_Hurt26.wav */,
 			);
 			name = Audio;
 			path = ..;
@@ -329,19 +353,27 @@
 				03C04E391E8B2B50009A0710 /* bird.png in Resources */,
 				031969591E78700900109512 /* LeaderBoard.sks in Resources */,
 				0373D1DE1E76EBF80016699C /* LevelBg.jpg in Resources */,
+				0306F7841E9DB03800FCF054 /* CombDesign.png in Resources */,
 				031B81B31E6D190500291790 /* Main.storyboard in Resources */,
 				031B81DC1E6D1ACD00291790 /* Bee Comb.png in Resources */,
 				031B81B51E6D190500291790 /* Assets.xcassets in Resources */,
+				0306F7821E9DACCB00FCF054 /* YellowBall.png in Resources */,
 				03C714341E78575600E77628 /* LeaderBoardButton.png in Resources */,
+				03B6160C1E9C94B600D54F5C /* Powerup41.wav in Resources */,
 				031B81EB1E6D25C900291790 /* heart-full.png in Resources */,
+				03B6160A1E9C94A500D54F5C /* Hit_Hurt26.wav in Resources */,
+				03E9D7B51E9DA485003460CE /* Pickup_Coin5.wav in Resources */,
+				03B6160E1E9C960F00D54F5C /* AdhesiveWombat - 8 Bit Adventure.mp3 in Resources */,
 				031B81E91E6D25C400291790 /* button-menu.png in Resources */,
 				03108D201E80AC12006C7EB8 /* LevelBg2.jpg in Resources */,
 				031B81B81E6D190500291790 /* LaunchScreen.storyboard in Resources */,
+				0306F7861E9DB10200FCF054 /* CombBg2.png in Resources */,
 				0373D1E61E773D750016699C /* Settings.png in Resources */,
 				0306354C1E89C8690072F589 /* GameScene.sks in Resources */,
 				031B81E71E6D25BD00291790 /* button-restart.png in Resources */,
 				031B81AC1E6D190500291790 /* Actions.sks in Resources */,
 				031969631E78844400109512 /* HoneyCombBG.png in Resources */,
+				03E9D7B31E9DA47B003460CE /* Pickup_Coin9.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
