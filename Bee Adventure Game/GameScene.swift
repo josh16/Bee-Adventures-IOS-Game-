@@ -214,7 +214,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate,AVAudioPlayerDelegate {
     var lastSpawn: CFTimeInterval = 0
     
     //Time interval for enemy to spawn
-    var interval:CFTimeInterval = 10
+    var interval:CFTimeInterval = 5
    
     //Update function
     override func update(_ currentTime: CFTimeInterval) {
@@ -235,7 +235,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate,AVAudioPlayerDelegate {
             SpawnHoney()
             
             lastSpawn = currentTime
-            interval = CFTimeInterval( arc4random_uniform(5))
+            interval = CFTimeInterval( arc4random_uniform(4))
         }
        
     }
@@ -267,6 +267,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate,AVAudioPlayerDelegate {
         
         //Enemy Physics
         Enemy.physicsBody = SKPhysicsBody(rectangleOf: CGSize( width:Enemy.size.width, height: Enemy.size.width))
+        //Enemy.physicsBody = SKPhysicsBody(texture: "bird", size: <#T##CGSize#>)
         Enemy.physicsBody?.categoryBitMask = PhysicsCategory.ENEMY
         Enemy.physicsBody?.contactTestBitMask = PhysicsCategory.PLAYER
         Enemy.physicsBody?.collisionBitMask = PhysicsCategory.PLAYER
@@ -336,6 +337,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate,AVAudioPlayerDelegate {
         //Moving the Background Sprites
         bg.position = CGPoint(x:bg.position.x-5 , y:bg.position.y)
         bg2.position = CGPoint(x:bg.position.x-5 , y:bg2.position.y)
+        
+        
+        
+        
+        
         
         
     }
